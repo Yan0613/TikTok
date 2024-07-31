@@ -1,0 +1,27 @@
+[HTTPServer]
+IP = "" // 服务器 IP
+Port =  // 服务器端口号
+[Database]
+IP = "" // 数据库 IP
+Port =  // 数据库端口号
+Account = "" // 数据库用户名
+Password = "" // 数据库密码
+DatabaseName = "" // 数据库名
+Protocol = ""
+Charset = ""
+ParseTime =
+TimeZone = ""
+[OSS]
+CredentialType = ""
+CredentialRoleName = ""
+Endpoint = { Internal = "oss-cn-beijing-internal.aliyuncs.com", External = "oss-cn-beijing.aliyuncs.com" }
+BucketName = ""
+[Redis]
+RedisHost = "" // Redis IP
+RedisPort =  // Redis 端口号
+RedisPassword = "" // Redis 密码
+[Rabbitmq]
+RabbitmqHost = "" // 消息队列 IP
+RabbitmqPort =  // 消息队列端口号
+RabbitmqUsername = "" // 消息队列用户名
+RabbitmqPassword = "" // 消息队列密码
