@@ -1,7 +1,7 @@
 package utils
 
 import (
-	"github.com/Shanwu404/TikTokLite/dao"
+	"github.com/Yan0613/TikTok/dao"
 	"github.com/brianvoe/gofakeit/v6"
 	"time"
 )

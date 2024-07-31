@@ -4,7 +4,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/Shanwu404/TikTokLite/middleware/auth"
+	"github.com/Yan0613/TikTok/middleware/auth"
 )
 
 func TestCommentAction(t *testing.T) {

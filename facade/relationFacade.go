@@ -3,7 +3,7 @@ package facade
 import (
 	"sync"
 
-	"github.com/Shanwu404/TikTokLite/service"
+	"github.com/Yan0613/TikTok/service"
 )
 
 type RelationActionRequest struct {

@@ -5,8 +5,8 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/Shanwu404/TikTokLite/log/logger"
-	"github.com/Shanwu404/TikTokLite/service"
+	"github.com/Yan0613/TikTok/log/logger"
+	"github.com/Yan0613/TikTok/service"
 )
 
 type DouyinFeedRequest struct {

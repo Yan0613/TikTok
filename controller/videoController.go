@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/Shanwu404/TikTokLite/facade"
+	"github.com/Yan0613/TikTok/facade"
 
 	"github.com/gin-gonic/gin"
 )

@@ -1,8 +1,8 @@
 package facade
 
 import (
-	"github.com/Shanwu404/TikTokLite/middleware/auth"
-	"github.com/Shanwu404/TikTokLite/service"
+	"github.com/Yan0613/TikTok/middleware/auth"
+	"github.com/Yan0613/TikTok/service"
 )
 
 type LoginRequest struct {

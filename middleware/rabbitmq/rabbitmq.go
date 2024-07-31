@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/Shanwu404/TikTokLite/config"
-	"github.com/Shanwu404/TikTokLite/log/logger"
+	"github.com/Yan0613/TikTok/config"
+	"github.com/Yan0613/TikTok/log/logger"
 	"github.com/streadway/amqp"
 )
 

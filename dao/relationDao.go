@@ -1,7 +1,7 @@
 package dao
 
 import (
-	"github.com/Shanwu404/TikTokLite/log/logger"
+	"github.com/Yan0613/TikTok/log/logger"
 )
 
 // 定义用户信息结构体

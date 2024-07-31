@@ -1,11 +1,11 @@
 package service
 
 import (
-	"github.com/Shanwu404/TikTokLite/log/logger"
+	"github.com/Yan0613/TikTok/log/logger"
 	"log"
 	"time"
 
-	"github.com/Shanwu404/TikTokLite/dao"
+	"github.com/Yan0613/TikTok/dao"
 )
 
 type MessageServiceImpl struct{}

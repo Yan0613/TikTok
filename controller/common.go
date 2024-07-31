@@ -1,6 +1,6 @@
 package controller
 
-import "github.com/Shanwu404/TikTokLite/service"
+import "github.com/Yan0613/TikTok/service"
 
 type Response struct {
 	StatusCode int32  `json:"status_code"`

@@ -2,8 +2,8 @@ package service
 
 import (
 	"fmt"
-	"github.com/Shanwu404/TikTokLite/dao"
-	"github.com/Shanwu404/TikTokLite/middleware/redis"
+	"github.com/Yan0613/TikTok/dao"
+	"github.com/Yan0613/TikTok/middleware/redis"
 	"testing"
 	"time"
 )

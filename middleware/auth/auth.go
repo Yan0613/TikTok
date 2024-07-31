@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/Shanwu404/TikTokLite/log/logger"
+	"github.com/Yan0613/TikTok/log/logger"
 	"github.com/gin-gonic/gin"
 	"github.com/golang-jwt/jwt/v5"
 )

@@ -3,7 +3,7 @@ package service
 import (
 	"testing"
 
-	"github.com/Shanwu404/TikTokLite/dao"
+	"github.com/Yan0613/TikTok/dao"
 )
 
 func MessageServiceImplInit() {

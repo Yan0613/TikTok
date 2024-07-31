@@ -8,7 +8,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/Shanwu404/TikTokLite/config"
+	"github.com/Yan0613/TikTok/config"
 	"github.com/go-redis/redis/v8"
 )
 

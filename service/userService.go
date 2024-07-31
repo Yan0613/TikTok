@@ -1,6 +1,6 @@
 package service
 
-import "github.com/Shanwu404/TikTokLite/dao"
+import "github.com/Yan0613/TikTok/dao"
 
 // 新增UserInfoParams结构体,避免暴露dao.UserInfo结构体
 type UserInfoParams struct {

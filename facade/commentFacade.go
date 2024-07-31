@@ -4,8 +4,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/Shanwu404/TikTokLite/service"
-	"github.com/Shanwu404/TikTokLite/utils"
+	"github.com/Yan0613/TikTok/service"
+	"github.com/Yan0613/TikTok/utils"
 )
 
 type CommentInfo struct {

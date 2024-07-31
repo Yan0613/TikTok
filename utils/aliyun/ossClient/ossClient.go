@@ -3,8 +3,8 @@ package ossClient
 import (
 	"mime/multipart"
 
-	"github.com/Shanwu404/TikTokLite/config"
-	"github.com/Shanwu404/TikTokLite/log/logger"
+	"github.com/Yan0613/TikTok/config"
+	"github.com/Yan0613/TikTok/log/logger"
 	"github.com/aliyun/aliyun-oss-go-sdk/oss"
 	"github.com/aliyun/credentials-go/credentials"
 )

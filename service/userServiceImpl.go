@@ -8,10 +8,10 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/Shanwu404/TikTokLite/dao"
-	"github.com/Shanwu404/TikTokLite/log/logger"
-	"github.com/Shanwu404/TikTokLite/middleware/redis"
-	"github.com/Shanwu404/TikTokLite/utils"
+	"github.com/Yan0613/TikTok/dao"
+	"github.com/Yan0613/TikTok/log/logger"
+	"github.com/Yan0613/TikTok/middleware/redis"
+	"github.com/Yan0613/TikTok/utils"
 	"golang.org/x/crypto/bcrypt"
 	"gorm.io/gorm"
 )

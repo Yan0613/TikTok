@@ -3,8 +3,8 @@ package controller
 import (
 	"net/http"
 
-	"github.com/Shanwu404/TikTokLite/facade"
-	"github.com/Shanwu404/TikTokLite/utils"
+	"github.com/Yan0613/TikTok/facade"
+	"github.com/Yan0613/TikTok/utils"
 
 	"github.com/gin-gonic/gin"
 )

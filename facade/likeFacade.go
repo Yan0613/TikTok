@@ -1,7 +1,7 @@
 package facade
 
 import (
-	"github.com/Shanwu404/TikTokLite/service"
+	"github.com/Yan0613/TikTok/service"
 )
 
 type LikeActionRequest struct {

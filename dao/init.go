@@ -6,7 +6,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/Shanwu404/TikTokLite/config"
+	"github.com/Yan0613/TikTok/config"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"

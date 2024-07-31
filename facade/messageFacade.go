@@ -4,7 +4,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/Shanwu404/TikTokLite/service"
+	"github.com/Yan0613/TikTok/service"
 )
 
 type MessageInfo struct {

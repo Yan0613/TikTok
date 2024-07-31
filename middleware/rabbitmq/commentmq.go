@@ -5,7 +5,7 @@ import (
 	"log"
 	"strconv"
 
-	"github.com/Shanwu404/TikTokLite/dao"
+	"github.com/Yan0613/TikTok/dao"
 	"github.com/streadway/amqp"
 )
 

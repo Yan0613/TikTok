@@ -4,8 +4,8 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/Shanwu404/TikTokLite/facade"
-	"github.com/Shanwu404/TikTokLite/service"
+	"github.com/Yan0613/TikTok/facade"
+	"github.com/Yan0613/TikTok/service"
 	"github.com/gin-gonic/gin"
 )
 

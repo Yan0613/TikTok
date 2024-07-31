@@ -1,4 +1,4 @@
-module github.com/Shanwu404/TikTokLite
+module github.com/Yan0613/TikTok
 
 go 1.20
 
