@@ -1,6 +1,6 @@
 [HTTPServer]
-IP = "" // 服务器 IP
-Port =  // 服务器端口号
+IP = "localhost" // 服务器 IP
+Port = 80 // 服务器端口号
 [Database]
 IP = "" // 数据库 IP
 Port =  // 数据库端口号
