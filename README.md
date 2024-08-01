@@ -7,7 +7,6 @@ TikTok
 ├── /controller/ 控制器包
 ├── /dao/ 数据库访问
 ├── /middleware/ 中间件
-│   ├── ffmpeg/ 视频截图
 │   ├── jwt/ 鉴权
 │   ├── rabbitmq/ 消息队列
 │   ├── redis/ 缓存
