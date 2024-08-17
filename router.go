@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/Shanwu404/TikTokLite/controller"
-	"github.com/Shanwu404/TikTokLite/middleware/auth"
+	"github.com/Yan0613/TikTok/controller"
+	"github.com/Yan0613/TikTok/middleware/auth"
 	"github.com/gin-gonic/gin"
 )
 
@@ -10,7 +10,7 @@ func NewRouter() *gin.Engine {
 	r := gin.Default()
 	// pprof.Register(r) // 性能分析
 	apiRouter := r.Group("/douyin")
-	
+
 	userController := controller.NewUserController()
 	relationController := controller.NewRelationController()
 	videoController := controller.NewVideoController()
