@@ -1,31 +1,12 @@
-# TikTokLite
-
-基于 Gin 和 GORM 的仿抖音后端，采用 MVC 架构搭建，引入 Redis 和 RabbitMQ 进行优化，实现了低负载和高性能。
-
-
-## 目录
-
-- [使用说明](#使用说明)
-- [项目依赖](#项目依赖)
-- [项目配置](#项目配置)
-  - [配置文件](#配置文件)
-  - [MySQL配置](#MySQL配置)
-  - [Redis配置](#Redis配置)
-  - [RabbitMQ配置](#RabbitMQ配置)
-
-
-## 使用说明
-
-项目整体架构：
-
+# TikTok
+基于Gin，GORM，Redis, MySQL, RabbitMQ开发的简易版抖音后端
+## 项目结构
 ```
-TikTokLite 
+TikTok
 ├── /config/ 配置文件包
 ├── /controller/ 控制器包
 ├── /dao/ 数据库访问
-├── /images/ 图片引用
 ├── /middleware/ 中间件
-│   ├── ffmpeg/ 视频截图
 │   ├── jwt/ 鉴权
 │   ├── rabbitmq/ 消息队列
 │   ├── redis/ 缓存
@@ -38,22 +19,8 @@ TikTokLite
 ├── README.md
 └── router.go
 ```
-
-项目运行：
-
-```go
-go run main.go router.go
-```
-
 ## 项目依赖
-
-TikTokLite 项目依赖如下：
-
-```
-module github.com/Shanwu404/TikTokLite
-
-go 1.20
-
+```go
 require (
 	github.com/BurntSushi/toml v1.3.2
 	github.com/aliyun/aliyun-oss-go-sdk v2.2.8+incompatible
@@ -71,19 +38,13 @@ require (
 	gorm.io/gorm v1.25.2
 )
 ```
+项目运行：
 
-依赖安装：
-
-```bash
-go mod download
+```go
+go run main.go router.go
 ```
-
 ## 项目配置
-
-### 配置文件
-
-本项目的所有配置都在 .toml 文件中，出于安全考虑并未上传到项目中，该文件包含内容如下：
-
+配置文件：
 ```
 [HTTPServer]
 IP = "" // 服务器 IP
@@ -112,38 +73,4 @@ RabbitmqHost = "" // 消息队列 IP
 RabbitmqPort =  // 消息队列端口号
 RabbitmqUsername = "" // 消息队列用户名
 RabbitmqPassword = "" // 消息队列密码
-```
-
-### MySQL配置
-
-MySQL 的安装配置比较简单，此处略过⏭
-
-### Redis配置
-
-**安装**
-
-官网下载安装包解压即可
-
-**启动/测试**
-
-```bash
-redis-server
-ping # 返回 PONG
-```
-
-### RabbitMQ配置
-
-**安装**
-
-```bash
-# Linux
-apt-get install rabbitmq-server
-# Mac
-brew intsall rabbitmq-server
-```
-
-**启动**
-
-```bash
-rabbitmq-server
 ```
