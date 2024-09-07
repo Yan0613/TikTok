@@ -1,18 +1,23 @@
 package ossClient
 
 import (
-	"mime/multipart"
-
 	"github.com/Yan0613/TikTok/config"
 	"github.com/Yan0613/TikTok/log/logger"
 	"github.com/aliyun/aliyun-oss-go-sdk/oss"
 	"github.com/aliyun/credentials-go/credentials"
+	"io"
+	"mime/multipart"
 )
 
 type Credentials struct {
 	AccessKeyId     string
 	AccessKeySecret string
 	SecurityToken   string
+}
+
+type CompletedPart struct {
+	PartNumber int    // 分片编号
+	ETag       string // 分片的ETag
 }
 
 type CredentialsProvider struct {
@@ -82,16 +87,61 @@ func NewBucket(mode string) (*MyBucket, error) {
 }
 
 func (mb *MyBucket) UploadVideo(file *multipart.FileHeader, internalURL string) error {
-	fileStrem, err := file.Open()
+	fileStream, err := file.Open()
 	if err != nil {
 		logger.Errorln("Failed to open multipart file:", internalURL, err)
 		return err
 	}
-	err = mb.PutObject(internalURL, fileStrem)
+	defer fileStream.Close()
+
+	imur, err := mb.InitiateMultipartUpload(internalURL)
 	if err != nil {
-		logger.Errorln("Failed to put object via GO SDK:", internalURL, err)
+		logger.Errorln("Failed to initiate multipart upload:", internalURL, err)
 		return err
 	}
+
+	// 定义分片大小,此处为5MB
+	partSize := int64(5 * 1024 * 1024)
+	fileSize := file.Size
+
+	// 计算分片数量，向上取整
+	numParts := int((fileSize + partSize - 1) / partSize)
+
+	var parts []oss.UploadPart
+
+	// 分片上传
+	for i := 0; i < numParts; i++ {
+		start := int64(i) * partSize
+		size := partSize
+		if start+size > fileSize {
+			size = fileSize - start
+		}
+
+		_, err = fileStream.Seek(start, io.SeekStart)
+		if err != nil {
+			logger.Errorln("Failed to seek file:", internalURL, err)
+			mb.AbortMultipartUpload(imur)
+			return err
+		}
+
+		part, err := mb.UploadPart(imur, fileStream, size, i+1)
+		if err != nil {
+			logger.Errorln("Error uploading part:", i+1, err)
+			mb.AbortMultipartUpload(imur)
+			return err
+		}
+		parts = append(parts, part)
+	}
+
+	// 完成分片上传
+	cmur, err := mb.CompleteMultipartUpload(imur, parts)
+	if err != nil {
+		logger.Errorln("Failed to complete multipart upload:", internalURL, err)
+		mb.AbortMultipartUpload(imur)
+		return err
+	}
+
+	logger.Infof("File uploaded successfully: %s", cmur)
 	return nil
 }
 

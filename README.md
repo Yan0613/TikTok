@@ -74,3 +74,10 @@ RabbitmqPort =  // 消息队列端口号
 RabbitmqUsername = "" // 消息队列用户名
 RabbitmqPassword = "" // 消息队列密码
 ```
+## 特性支持
+RabbitMQ异步通知✔️  
+令牌桶限流✔️  
+JWT鉴权✔️  
+直播（websocket)  
+大文件断点续传、分片上传  
+门面模式✔️
